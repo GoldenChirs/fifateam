@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>FIFA Team</title>
+<script src="https://use.fontawesome.com/091bb176c8.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
 <style>
 *, *:before, *:after {
@@ -11,7 +12,7 @@
 }
 
 body {
-  background: #edf08a;
+  background: url(./bg.jpg);
   overflow: hidden;
   font-family: sans-serif;
 }
@@ -51,12 +52,12 @@ body {
   margin-left: -50px;
 }
 
-.fifa_love .fa-heart {
+.fifa_love .fa-thumbs-up {
   opacity: 0.7;
   transform: scale(1);
 }
 
-.fifa_nope .fa-remove {
+.fifa_nope .fa-thumbs-down {
   opacity: 0.7;
   transform: scale(1);
 }
@@ -76,7 +77,8 @@ body {
   width: 90vw;
   max-width: 400px;
   height: 70vh;
-  /* background: #FFFFFF; */
+<!--  background: #FFFFFF; -->
+  color: white;
   padding-bottom: 40px;
   border-radius: 8px;
   overflow: hidden;
@@ -101,10 +103,11 @@ body {
 }
 
 .fifa--card h3 {
-  margin-top: 32px;
+<!--  margin-top: 32px;-->
   font-size: 32px;
   padding: 0 16px;
   pointer-events: none;
+  color: wheat;
 }
 
 .fifa--card p {
@@ -117,7 +120,6 @@ body {
 .fifa--buttons {
   flex: 0 0 100px;
   text-align: center;
-  padding-top: 20px;
 }
 
 .fifa--buttons button {
@@ -139,12 +141,12 @@ body {
   vertical-align: middle;
 }
 
-.fa-heart {
-  color: #FFACE4;
+.fa-thumbs-up {
+  color: wheat;
 }
 
-.fa-remove {
-  color: #CDD6DD;
+.fa-thumbs-down {
+  color: gray;
 }
  </style>
 
@@ -153,8 +155,8 @@ body {
 
     <div class="fifa">
         <div class="fifa--status">
-          <i class="fa fa-remove"></i>
-          <i class="fa fa-heart"></i>
+          <i class="fa fa-thumbs-down"></i>
+          <i class="fa fa-thumbs-up"></i>
         </div>
       
         <div class="fifa--cards">
@@ -172,18 +174,21 @@ body {
           </div>
           <div class="fifa--card">
             <img src="./sz.png">
+            <h3>False Nine</h3>
+
           </div>
           <div class="fifa--card">
             <img src="./eq.png">
           </div>
           <div class="fifa--card">
             <img src="./cc.png">
+           <h3>True Dailo, Great Chemical With Butcherski</h3>
           </div>
         </div>
       
         <div class="fifa--buttons">
-          <button id="nope"><i class="fa fa-remove"></i></button>
-          <button id="love"><i class="fa fa-heart"></i></button>
+          <button id="nope"><i class="fa fa-thumbs-down"></i></button>
+          <button id="love"><i class="fa fa-thumbs-up"></i></button>
         </div>
       </div>
 
